@@ -20,4 +20,17 @@ def solve(numheads, numlegs):
     rabbits = numheads - chickens
     print('chickens:', chickens, 'rabbits:', rabbits)
 
-solve(35, 94)
+#solve(35, 94)
+
+#4
+#def filter_prime(a):
+
+
+
+
+#9
+def volume_of_sphere(r):
+    volume = (4 * 3.14 * r**3) / 3
+    print(round(volume, 3))
+r = int(input())
+volume_of_sphere(r)
