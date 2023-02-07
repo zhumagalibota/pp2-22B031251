@@ -32,5 +32,17 @@ def solve(numheads, numlegs):
 def volume_of_sphere(r):
     volume = (4 * 3.14 * r**3) / 3
     print(round(volume, 3))
-r = int(input())
-volume_of_sphere(r)
+#r = int(input())
+#volume_of_sphere(r)
+
+
+#11
+def palindrome(p):
+    i = p.replace(" ", "")
+    reverse = i[::-1]
+    if reverse == i:
+        print('yes')
+    else:
+        print('no')
+#p = input()
+#palindrome(p)
