@@ -16,8 +16,8 @@ def temperature_conversion(F):
 
 #3
 def solve(numheads, numlegs):
-    rabbits = 24/2
-    chickens = numheads - rabbits
+    chickens = (numheads * 4 - 94) / 2
+    rabbits = numheads - chickens
     print('chickens:', chickens, 'rabbits:', rabbits)
 
 solve(35, 94)
