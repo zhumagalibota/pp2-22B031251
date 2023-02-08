@@ -78,7 +78,8 @@ movies = [
 ]
 
 def score1():
-    a = random.choice()
-    print(a)
+    if movies[0:-1]["name"] >= 5.5:
+        print(movies[0:-1]["name"])
 
 score1()
+

@@ -1,8 +1,10 @@
 #1
 class My_class:
-    def getString(s):
-        s = input()
-    def printString(s):
-        print(s.upper())
-a = My_class()
-print(a)
+    def __init__(self):
+        self.string = input().upper()
+
+    def printString(self):
+        print(self.string)
+
+c = My_class()
+c.printString()
