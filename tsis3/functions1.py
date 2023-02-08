@@ -22,6 +22,16 @@ def solve(numheads, numlegs):
 
 #solve(35, 94)
 
+#6
+def reverse_sentence(sentence):
+    sentence.reverse()
+    newsentence = ""
+    for i in sentence:
+        newsentence += " " + i    
+    print(newsentence.strip())
+
+#sentence = input().split()
+#reverse_sentence(sentence)
 
 
 
