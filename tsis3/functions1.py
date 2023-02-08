@@ -26,8 +26,6 @@ def solve(numheads, numlegs):
 #def filter_prime(a):
 
 
-
-
 #9
 def volume_of_sphere(r):
     volume = (4 * 3.14 * r**3) / 3
@@ -46,3 +44,13 @@ def palindrome(p):
         print('no')
 #p = input()
 #palindrome(p)
+
+#12
+def histogram(l):
+    for i in range(0, len(l)):
+        k = int(l[i])
+        j = '*' * k
+        print(j)      
+#l = input().split()
+#histogram(l)
+
