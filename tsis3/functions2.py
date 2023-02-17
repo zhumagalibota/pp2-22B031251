@@ -77,9 +77,7 @@ movies = [
 }
 ]
 
-def score1():
-    if movies[0:-1]["name"] >= 5.5:
-        print(movies[0:-1]["name"])
+x = int(input())
 
-score1()
+for a%5==0 and a%x==0
 
