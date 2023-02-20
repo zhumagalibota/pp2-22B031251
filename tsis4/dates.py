@@ -16,3 +16,6 @@ print("Today:", today.strftime("%A"),
       "\nTomorrow:", tomorrow.strftime("%A"))'''
 
 #3
+'''x = datetime.datetime.now()
+a = datetime.datetime.now().replace(microsecond = 0)
+print("With:", x, "\nWithout:", a)'''
