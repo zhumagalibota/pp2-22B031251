@@ -2,6 +2,10 @@ import datetime
 
 #1
 x = datetime.datetime.now()
-a = x.strftime("%d")
-b = int(a) - 5
-print("Current date:", a, "\nsubtracted five days:", b)
+a = datetime.timedelta(5)
+b = x - a
+print("Current date:", x, "\nsubtracted five days:", b)
+
+#2
+'''x = datetime.datetime.now() 
+a = '''
