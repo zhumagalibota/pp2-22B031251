@@ -23,14 +23,22 @@ def gen(n):
             yield v
             v += 1
 for v in gen(100):
-    print(v)'''
+    print(v)
 
 #4
 a = int(input())
 b = int(input())
 a = (v**2 for v in range(a, b))
 for v in a:
-    print(v)
+    print(v)'''
+
+#5
+def gen(v):
+    while v>=0:
+        yield v
+        v = v-1
+for i in gen(10):
+    print(i)
 
 
 
