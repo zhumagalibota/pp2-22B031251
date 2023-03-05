@@ -31,9 +31,8 @@ x = re.sub(a, r, data)
 print(x)
 
 #7
-'''
-x = re.sub('_+[а-я]', data)
-'''
+x = re.sub('-+[а-я]', r, data)
+
 
 #8
 x = re.sub(r'([А-Я])', r'\1,', data)
