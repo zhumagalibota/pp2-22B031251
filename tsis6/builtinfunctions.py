@@ -6,6 +6,16 @@ b = list(map(int, a))
 c = math.prod(b)
 print(c)
 
+#2
+a = 'ASDFhv cbdsljiaPOO'
+count, count1 =0, 0
+for i in a:
+    if i.isupper():
+        count +=1
+    if i.islower():
+        count1 +=1
+print(count, count1)
+
 #3
 a = input()
 b = ''.join(reversed(a))
@@ -19,5 +29,4 @@ a = input().split()
 b = tuple(a)
 print(all(b))'''
 
-
-#----------------2 and 4 not done
+#4
