@@ -54,9 +54,13 @@ a = string.ascii_uppercase[:26]
 for i in a:
     b = i+".txt"
    #f = open(b, 'w')
-   #os.remove(b)'''
+   #os.remove(b)
 
-#7----------------------
+#7
+with open("osmod.py", 'r') as f, open("a.py", "w") as f2:
+    for i in f:
+        f2.write(i)
+#os.remove("a.py")
 
 #8
 path = "a.py"
@@ -64,5 +68,4 @@ a = os.access(path, os.F_OK)
 if a:
     os.remove(path)
 else:
-    print("file does not exist")
-
+    print("file does not exist")'''
