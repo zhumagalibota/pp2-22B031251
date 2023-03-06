@@ -36,7 +36,7 @@ for i in a:
         count += 1
     else:
         count1 += 1
-    print(count+count1)'''
+    print(count+count1)
 
 #5
 a = open('b.txt', 'w')
@@ -45,6 +45,13 @@ for i in b:
     a.write(i+' ')
 a.close()
 a = open('b.txt', 'r')
-print(a.read())
+print(a.read())'''
 
+#6
+import string
 
+a = string.ascii_uppercase[:26]
+for i in a:
+    b = i+".txt"
+   #f = open(b, 'w')
+   #os.remove(b)
