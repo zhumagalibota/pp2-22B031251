@@ -45,7 +45,7 @@ for i in b:
     a.write(i+' ')
 a.close()
 a = open('b.txt', 'r')
-print(a.read())'''
+print(a.read())
 
 #6
 import string
@@ -54,4 +54,15 @@ a = string.ascii_uppercase[:26]
 for i in a:
     b = i+".txt"
    #f = open(b, 'w')
-   #os.remove(b)
+   #os.remove(b)'''
+
+#7----------------------
+
+#8
+path = "a.py"
+a = os.access(path, os.F_OK)
+if a:
+    os.remove(path)
+else:
+    print("file does not exist")
+
