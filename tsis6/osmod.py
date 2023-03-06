@@ -4,7 +4,7 @@ import os
 path = '/'
 a = os.listdir(path)
 print(a)
-'''
+
 #2
 path = '/Python311'
 a = os.access(path, os.F_OK)
@@ -18,7 +18,6 @@ if a:
     print(d)
 
 #3
-'''
 path = '/Python311'
 a = os.path.exists(path)
 if a:
@@ -27,4 +26,25 @@ if a:
     "\ndirectory:", os.path.dirname(path)
     )
 else:
-    print("path does not exist")'''
+    print("path does not exist")
+
+#4
+a = open(r'osmod.py', 'r')
+count, count1 = 0, 0
+for i in a:
+    if i != '\n':
+        count += 1
+    else:
+        count1 += 1
+    print(count+count1)'''
+
+#5
+a = open('b.txt', 'w')
+b = ["1", "2", "3"]
+for i in b:
+    a.write(i+' ')
+a.close()
+a = open('b.txt', 'r')
+print(a.read())
+
+
