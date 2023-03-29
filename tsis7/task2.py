@@ -3,7 +3,7 @@ import pygame   # ------------ not done yet
 pygame.init()
 
 pygame.mixer.music.load("EXO_-_Tempo_(musmore.com).mp3")
-songs = ["EXO_-_Tempo_(musmore.com).mp3", "BAEKHYUN_-_UN_Village_(musmore.com).mp3"]
+#songs = ["EXO_-_Tempo_(musmore.com).mp3", "BAEKHYUN_-_UN_Village_(musmore.com).mp3", "EXO_-_Ko_Ko_Bop_(musmore.com).mp3"]
 
 screen = pygame.display.set_mode((500, 500))
 pygame.display.set_caption("2 task")
