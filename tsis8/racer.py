@@ -19,7 +19,7 @@ screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Street Racer")
 background = pygame.image.load("AnimatedStreet.png")
 clock = pygame.time.Clock()
-
+'''
 class coin(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
@@ -35,7 +35,7 @@ class coin(pygame.sprite.Sprite):
    #     if (self.rect.bottom > 600):
     #        score_coins += 1
       #  self.rect.center = (random.randint(70, 370), random.randint(70, 370))
-
+'''
 
 class enemy(pygame.sprite.Sprite):
     def __init__(self):
