@@ -10,7 +10,6 @@ BLACK = pygame.Color(0, 0, 0)
 WHITE = pygame.Color(255, 255, 255)
 
 
-# Point = collections.namedtuple('Point', ['x', 'y'])
 
 class Point:
     def __init__(self, x, y):
@@ -25,7 +24,7 @@ class GameObject:
     def update(self, current_pos):
         return
 
-
+#Button
 class Button(GameObject):
     def __init__(self):
         self.size = 40
@@ -55,7 +54,7 @@ class Button(GameObject):
     def update(self, current_pos):
         pass
 
-
+#Drwing pen
 class Pen(GameObject):
     def __init__(self, *args, **kwargs):  # Pen(1, 2, 3, a=4) =>
         self.points: list[Point, ...] = []  # [(x1, y1), (x2, y2)]
@@ -72,17 +71,17 @@ class Pen(GameObject):
             )
 
     def update(self, current_pos):
-        self.points.append(Point(*current_pos))  # (x, y) Point((x, y)) => Point(x, y)
+        self.points.append(Point(*current_pos))  
 
 
-
+#drawing rectangle after pressing the button
 class Rectangle(GameObject):
-    def __init__(self, start_pos, *args, **kwargs): # Rectangle(start_pos=1); Pen(start_pos=1)
+    def __init__(self, start_pos, *args, **kwargs): 
         self.start_pos = Point(*start_pos)
         self.end_pos = Point(*start_pos)
 
     def draw(self):
-        start_pos_x = min(self.start_pos.x, self.end_pos.x)  # min(self.start_pos[0], self.end_pos[0])
+        start_pos_x = min(self.start_pos.x, self.end_pos.x) 
         start_pos_y = min(self.start_pos.x, self.end_pos.y)
 
         end_pos_x = max(self.start_pos.x, self.end_pos.x)
@@ -103,12 +102,11 @@ class Rectangle(GameObject):
         self.end_pos.x, self.end_pos.y = current_pos
 
 
-
 def main():
     running = True
     game_object = GameObject()
     active_obj = game_object
-    current_shape = Pen  # current_shape()
+    current_shape = Pen  
     button = Button()
     objects = [
         button
@@ -144,3 +142,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

@@ -31,11 +31,9 @@ class coin(pygame.sprite.Sprite):
 
     def move(self):
         global score_coins
-    ##    self.rect.move_ip(0, 0)
-   #     if (self.rect.bottom > 600):
-    #        score_coins += 1
-      #  self.rect.center = (random.randint(70, 370), random.randint(70, 370))
-'''
+        self.rect.move_ip(0, 0)
+        self.rect.center = (random.randrange(1, (width//10)) * 10,
+						random.randrange(1, (height//10)) * 10)'''
 
 class enemy(pygame.sprite.Sprite):
     def __init__(self):
@@ -51,6 +49,9 @@ class enemy(pygame.sprite.Sprite):
             score += 1
             self.rect.top = 0
             self.rect.center = (random.randint(30, 370), 0)
+
+
+
 
 class player(pygame.sprite.Sprite):
     def __init__(self):
@@ -73,17 +74,17 @@ class player(pygame.sprite.Sprite):
 
 p1 = player()
 e1 = enemy()
-c1 = coin()
+#c1 = coin()
 
 #GROUPS
 enemies = pygame.sprite.Group()
 enemies.add(e1)
-coins = pygame.sprite.Group()
-coins.add(c1)
+#coins = pygame.sprite.Group()
+#coins.add(c1)
 all_sprites = pygame.sprite.Group()
 all_sprites.add(p1)
 all_sprites.add(e1)
-all_sprites.add(c1)
+#all_sprites.add(c1)
 
 #EVENT SPEED
 speed_inc = pygame.USEREVENT + 1
@@ -96,16 +97,16 @@ if running:
 while running:
     for event in pygame.event.get():
         if event.type == speed_inc:
-            speed += 0.5
+            speed += 5
         
         if event.type == pygame.QUIT:
             running = False
     #SCREEN 
     screen.blit(background, (0, 0))
     scores = font_small.render(f"Score: {str(score)}", True, (0, 0, 0))
-    score_coins = font_small.render(f"Coins: {str(score)}", True, (0, 0, 0))
+    #score_coins = font_small.render(f"Coins: {str(score)}", True, (0, 0, 0))
     screen.blit(scores, (10, 10))
-    screen.blit(score_coins, (9, 30))
+    #screen.blit(score_coins, (9, 30))
 
 
     #MOVING OBJECTS
@@ -113,12 +114,13 @@ while running:
         screen.blit(i.image, i.rect)
         i.move()
     
-    #COLLISION COINS
+    '''#COLLISION COINS
     if pygame.sprite.spritecollideany(p1, coins):
         score_coins += 1
-        c1 = (random.randint(70, 370), random.randint(70, 370))
+        c1 = (random.randrange(1, (width//10)) * 10,
+						random.randrange(1, (height//10)) * 10)	
         pygame.display.flip()
-        time.sleep(0.5)
+        time.sleep(0.5)'''
 
     #COLLISION DETECTION
     if pygame.sprite.spritecollideany(p1, enemies):

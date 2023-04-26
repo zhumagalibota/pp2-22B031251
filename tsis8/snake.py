@@ -72,7 +72,7 @@ while True:
 			if event.key == pygame.K_RIGHT:
 				change_to = 'RIGHT'
 
-	# If two keys pressed simultaneously
+	# If two keys pressed together
 	if change_to == 'UP' and direction != 'DOWN':
 		direction = 'UP'
 	if change_to == 'DOWN' and direction != 'UP':
@@ -126,3 +126,4 @@ while True:
 	# Refresh game screen
 	pygame.display.update()
 	fps.tick(snake_speed)
+
