@@ -1,28 +1,69 @@
 import psycopg2
 
-connection = psycopg2.connect(host="localhost", port="5432", database="master", user="postgres", password="kbtu")
 
-connection.autocommit = True
-with connection.cursor() as cursor:
-    cursor.execute("SELECT version();")
-    print("Server version: {cursor.fetchone()}")
+try:
+    connection = psycopg2.connect(host="localhost", 
+    port="5432", database="master", 
+    user="postgres", password="kbtu")
 
-# with connection.cursor() as cursor:
-#     cursor.execute   (
-#    """CREATE TABLE PHONEBOOK (
-#     id SERIAL PRIMARY KEY,
-#     phone_number VARCHAR(50) NOT NULL,
-#     name VARCHAR(50) NOT NULL)"""
-#     )
-#     print("[INFO] Table created successfully")
+    connection.autocommit = True
 
-# with connection.cursor() as cursor:
-#     cursor.execute   (
-#        """INSERT INTO PHONEBOOK (phone_number, name) VALUES ('8715451345', 'A');"""
-#     )
 
-with connection.cursor() as cursor:
-    cursor.execute   (
-       """SELECT phone_number FROM PHONEBOOK WHERE name = 'A';""" 
-    )
-    print(cursor.fetchone())
+    # with connection.cursor() as cursor:
+    #     cursor.execute(
+    #         "SELECT version();"
+    #     )
+    #     print(cursor.fetchone())
+
+    #creating the table
+    # with connection.cursor() as cursor:
+    #     cursor.execute(
+    #         """CREATE TABLE phonebook(
+    #             id serial PRIMARY KEY,
+    #             name varchar(250) NOT NULL,
+    #             phone varchar(250) NOT NULL);"""
+    #     )
+    # print("table created")
+
+    # #inserting data
+    # with connection.cursor() as cursor:
+    #     cursor.execute(
+    #         """INSERT INTO phonebook (name, phone) 
+    #         VALUES ('C', '53538'),
+    #         ('D','5436566');"""
+    #     )
+    # print("new data added")
+
+    #insertiong data from csv file -------does not work
+    # with connection.cursor() as cursor:
+    #     cursor.execute(
+    #         """COPY phonebook(name, phone)
+    #         FROM 'C:\\Users\\zhuma\\OneDrive\\Документы\\pp2\\tsis10\\persons (1).csv'
+    #         DELIMITER ','
+    #         CSV HEADER;""" 
+    #     )
+    # print("csv file added")
+
+    #updating data
+    # with connection.cursor() as cursor:
+    #     cursor.execute(
+    #         """UPDATE phonebook SET phone = '1111111' WHERE name = 'A';"""
+    #     )
+    # print("updated")
+
+    # #deleting data
+    # with connection.cursor() as cursor:
+    #     cursor.execute(
+    #         """DELETE FROM phonebook WHERE name = 'B';"""
+    #     )
+    #     print("deleted")
+
+
+
+
+
+except Exception as _ex:
+    print("Error")
+finally:
+    connection.close()
+    print("connection closed")
