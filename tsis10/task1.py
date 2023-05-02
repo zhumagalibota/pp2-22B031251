@@ -59,6 +59,46 @@ try:
     #     print("deleted")
 
 
+    #querying sing fetchone() method
+    # with connection.cursor() as cursor:
+    #     cursor.execute(
+    #         """SELECT name, phone FROM phonebook ORDER BY id;"""
+    #     )
+    #     print("The number of rows:", cursor.rowcount)
+    #     row = cursor.fetchone()
+    #     while row is not None:
+    #         print(row)
+    #         row = cursor.fetchone()
+    #     cursor.close()
+
+    #querying using fetchall() method
+    # with connection.cursor() as cursor:
+    #     cursor.execute(
+    #         """SELECT name, phone FROM phonebook ORDER BY id;"""
+    #     )
+    #     rows = cursor.fetchall()
+    #     print("the number of rows:", cursor.rowcount)
+    #     for row in rows:
+    #         print(row)
+    #     cursor.close()
+
+
+    #querying using fetchmany() method:
+    with connection.cursor() as cursor:
+        cursor.execute(
+            """SELECT name, phone FROM phonebook 
+            ORDER BY id;"""
+        )
+        rows = cursor.fetchmany(2)
+        print(rows)
+        cursor.close()
+
+
+    # with connection.cursor() as cursor:
+    #     cursor.execute(
+    #         """SELECT * FROM phonebook"""
+    #     )
+    #     print(cursor.fetchall())
 
 
 

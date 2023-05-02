@@ -1,6 +1,10 @@
-connection = psycopg2.connect(host="localhost", port="5432", database="master", user="postgres", password="kbtu")
-
-connection.autocommit = True
 with connection.cursor() as cursor:
-    cursor.execute("SELECT version();")
-    print("Server version: {cursor.fetchone()}")
+    #     cursor.execute(
+    #         """SELECT name, phone FROM phonebook ORDER BY id;"""
+    #     )
+    #     print("The number of rows:", cursor.rowcount)
+    #     row = cursor.fetchone()
+    #     while row is not None:
+    #         print(row)
+    #         row = cursor.fetchone()
+    #     corsor.close()
