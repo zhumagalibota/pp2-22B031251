@@ -94,12 +94,6 @@ try:
     #     cursor.close()
 
 
-    # with connection.cursor() as cursor:
-    #     cursor.execute(
-    #         """SELECT * FROM phonebook"""
-    #     )
-    #     print(cursor.fetchall())
-
     #FILTERS
      # with connection.cursor() as cursor:
     #     cursor.execute(
@@ -118,6 +112,7 @@ try:
     #         """SELECT name FROM phonebook GROUP BY name HAVING count(name)>1;"""
     #     )
     #     print(cursor.fetchall())
+
 
 
 
