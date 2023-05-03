@@ -84,19 +84,38 @@ try:
 
 
     #querying using fetchmany() method:
-    with connection.cursor() as cursor:
-        cursor.execute(
-            """SELECT name, phone FROM phonebook 
-            ORDER BY id;"""
-        )
-        rows = cursor.fetchmany(2)
-        print(rows)
-        cursor.close()
+    # with connection.cursor() as cursor:
+    #     cursor.execute(
+    #         """SELECT name, phone FROM phonebook 
+    #         ORDER BY id;"""
+    #     )
+    #     rows = cursor.fetchmany(2)
+    #     print(rows)
+    #     cursor.close()
 
 
     # with connection.cursor() as cursor:
     #     cursor.execute(
     #         """SELECT * FROM phonebook"""
+    #     )
+    #     print(cursor.fetchall())
+
+    #FILTERS
+     # with connection.cursor() as cursor:
+    #     cursor.execute(
+    #         """SELECT * FROM phonebook WHERE name = 'A';"""
+    #     )
+    #     print(cursor.fetchall())
+
+    # with connection.cursor() as cursor:
+    #     cursor.execute(
+    #         """SELECT name FROM phonebook GROUP BY name;"""
+    #     )
+    #     print(cursor.fetchall())
+
+    # with connection.cursor() as cursor:
+    #     cursor.execute(
+    #         """SELECT name FROM phonebook GROUP BY name HAVING count(name)>1;"""
     #     )
     #     print(cursor.fetchall())
 
